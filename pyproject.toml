@@ -1,0 +1,47 @@
+[project]
+name = "http-client"
+package-mode = false
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Arina Morozova"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+
+
+[tool.poetry.dependencies]
+toml = "^0.10.2"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.1"
+flake8 = "^7.1.2"
+flake8-bugbear = "^24.12.12"
+flake8-comprehensions = "^3.16.0"
+flake8-builtins = "^2.5.0"
+flake8-use-fstring = "^1.4"
+flake8-pytest-style = "^2.1.0"
+pep8-naming = "^0.14.1"
+mypy = "^1.15.0"
+types-toml = "^0.10.8.20240310"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line_length = 100
+
+
+[tool.isort]
+profile = "black"
+line_length = 100
+filter_files = true
